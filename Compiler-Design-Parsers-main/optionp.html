@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Property Options</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #00b4db, #0083b0); /* Gradient background color in shades of blue */
+    transition: background 0.5s ease-in-out; /* Transition for background color */
+}
+
+.property-option {
+    flex-basis: calc(50% - 20px);
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    background-color: #fff; /* White background color */
+}
+
+.property-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Slight increase in box shadow on hover */
+}
+
+.property-details {
+    padding: 20px;
+}
+
+.property-details h2 {
+    margin-top: 0;
+    color: #333; /* Dark text color */
+}
+
+.view-details-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Primary button color */
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.view-details-btn:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+/* Additional styling for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.property-option {
+    animation: fadeIn 0.5s ease-out; /* Apply fade-in animation */
+}
+
+        
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="property-option">
+        <div class="property-details">
+            <h2>LR(0) Parsing</h2>
+            <br><br><br><br>
+            <a href="lr1.html" class="view-details-btn">PARSE</a>
+        </div>
+    </div>
+
+    <div class="property-option">
+        <div class="property-details">
+            <h2>SLR Parsing</h2>
+            <br><br><br><br>
+            <a href="slr.html" class="view-details-btn">PARSE</a>
+        </div>
+    </div>
+    <div class="property-option">
+        <div class="property-details">
+            <h2>LALR Parsing</h2>
+            <br><br><br><br>
+            <a href="lalr1.html" class="view-details-btn">PARSE</a>
+        </div>
+    </div>
+    
+</div>
+</body>
+</html>
